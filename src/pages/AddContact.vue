@@ -11,7 +11,8 @@
                       required="required" 
                       class="form-control here" 
                       v-model="contact.first_name"
-                      v-focus:write.name.email="focus">
+                      v-focus:write.name.email="focus"
+                      v-validate>
           </div>
         </div>
       </div>
