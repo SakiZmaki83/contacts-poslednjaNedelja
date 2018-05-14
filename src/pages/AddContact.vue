@@ -5,7 +5,13 @@
         <label for="first_name" class="col-4 col-form-label">First Name</label>
         <div class="col-8">
           <div class="input-group">
-            <input id="first_name" name="first_name" type="text" required="required" class="form-control here" v-model="contact.first_name">
+              <input  id="first_name" 
+                      name="first_name" 
+                      type="text" 
+                      required="required" 
+                      class="form-control here" 
+                      v-model="contact.first_name"
+                      v-focus:write.name.email="focus">
           </div>
         </div>
       </div>
@@ -37,6 +43,7 @@
         </div>
       </div>
     </form>
+    <div v-demo="'joj'"></div>
   </div>
 </template>
 
@@ -51,7 +58,8 @@ export default {
         last_name: '',
         email: '',
         number: ''
-      }
+      },
+      focus: false
     }
   },
 
